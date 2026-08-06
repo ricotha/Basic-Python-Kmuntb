@@ -62,9 +62,15 @@
 # my_list_from_tuple = list(my_tuple)
 # print(my_list_from_tuple) # Coonverts tuple to list, Output: [1, 2, 3]
 
+# Default element from a list
+my_list1 = [1, 2, 3, 4, 5, 6]
+my_list1.clear() # Removes all elements from the list
+print(my_list1) # Output: []   
+
 # Labs
 # Adding student scores from a user and score and store them in a list. Then calculate the average score and print it.
 # Then calculate the average score and print it.
+# print highest and lowest score
 scores = []
 while True:
     score = input("Enter a student score (or type 'done' to finish): ")
@@ -79,5 +85,7 @@ while True:
 if scores:
     average = sum(scores) / len(scores)
     print(f"The average score is: {average}")
+    print(f"The highest score is: {max(scores)}")
+    print(f"The lowest score is: {min(scores)}")
 else:
     print("No valid scores were entered.")
