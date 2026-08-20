@@ -1,8 +1,7 @@
 def main():
     inventory = {}
-
+    
     while True:
-        print("\n--- Inventory System ---")
         print("1. Add a product")
         print("2. Update product quantity")
         print("3. Remove a product")
@@ -19,8 +18,22 @@ def main():
                 print("This product code already exists.")
             else:
                 name = input("Enter product name: ")
-                price = float(input("Enter price: "))
-                quantity = int(input("Enter quantity: "))
+                while True:
+                    try:
+                        price = float(input("Enter price: "))
+                        if price >= 0:
+                            break
+                        print("Price must be >= 0. Please try again.")
+                    except ValueError:
+                        print("Invalid input. Please enter a number.")
+                while True:
+                    try:
+                        quantity = int(input("Enter quantity: "))
+                        if quantity >= 0:
+                            break
+                        print("Quantity must be >= 0. Please try again.")
+                    except ValueError:
+                        print("Invalid input. Please enter a number.")
                 inventory[code] = {"name": name, "price": price, "quantity": quantity}
                 print("Product added.")
 
@@ -32,7 +45,12 @@ def main():
                 sub_choice = input("  Choose transaction type (a/b): ")
 
                 if sub_choice == "a":
-                    amount = int(input("Enter quantity to stock in: "))
+                    while True:
+                        try:
+                            amount = int(input("Enter quantity to stock in: "))
+                            break
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
                     if amount < 0:
                         print("Stock-in amount cannot be negative.")
                     else:
@@ -40,7 +58,12 @@ def main():
                         print(f"Stocked in {amount}. New quantity: {inventory[code]['quantity']}")
 
                 elif sub_choice == "b":
-                    amount = int(input("Enter quantity to stock out: "))
+                    while True:
+                        try:
+                            amount = int(input("Enter quantity to stock out: "))
+                            break
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
                     if amount < 0:
                         print("Stock-out amount cannot be negative.")
                     elif amount > inventory[code]["quantity"]:
