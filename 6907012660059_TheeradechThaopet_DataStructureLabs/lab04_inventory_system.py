@@ -1,6 +1,5 @@
 def main():
     inventory = {}
-    
     while True:
         print("1. Add a product")
         print("2. Update product quantity")
