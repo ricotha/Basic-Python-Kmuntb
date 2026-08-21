@@ -9,6 +9,7 @@ def main():
         print("6. Show low-stock products")
         print("7. Calculate inventory value")
         print("8. Exit")
+        
         choice = input("Enter your choice: ")
 
         if choice == "1":
