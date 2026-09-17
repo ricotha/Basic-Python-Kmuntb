@@ -7,3 +7,5 @@ while True:
         break
     else:
         print("You pressed " + key)
+
+print("Goodbye!")
