@@ -9,3 +9,6 @@ while True:
         print("You pressed " + key)
 
 print("Goodbye!")
+
+# This is a comment for fix-bug
+print('Hello World!, from a fix-bug.')
