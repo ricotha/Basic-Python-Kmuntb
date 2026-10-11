@@ -1,0 +1,4 @@
+SUBJECT = ["Python", "Math", "English", "Financial", "Law"]
+CARD_WIDTH = 32
+GRADE= {"A": 4.0,"B+": 3.5, "B": 3.0, "C+": 2.5, 
+         "C": 2.0,"D+": 1.5, "D": 1.0, "F": 0.0}
