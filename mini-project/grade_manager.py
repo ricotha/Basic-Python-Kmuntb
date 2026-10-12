@@ -79,8 +79,8 @@ class Student:
         print(border)
         print("|" + "REPORT CARD".center(30) + "|")
         print(divider)
-        print("| Name : " + self.name.ljust(22) + "|")
-        print("| ID   : " + self.student_id.ljust(22) + "|")
+        print("| Full Name : " + self.name.ljust(22) + "|")
+        print("| Student ID   : " + self.student_id.ljust(22) + "|")
         print(divider)
         for i in range(len(SUBJECTS)):
             text = f" {SUBJECTS[i]:<12}{self.scores[i]:>5}{score_to_grade(self.scores[i]):>8}"
