@@ -9,7 +9,7 @@ Python Mini Project
 SUBJECTS = ["Python", "Math", "Law", "English", "Finance"]  # list
 
 GRADE_POINTS = {"A": 4.0, "B+": 3.5, "B": 3.0, "C+": 2.5,
-                "C": 2.0, "D+": 1.5, "D": 1.0, "F": 0.0}            # dict
+                "C": 2.0, "D+": 1.5, "D": 1.0, "F": 0.0}    # dict
 
 FILE_NAME = "students.txt"
 
@@ -53,7 +53,7 @@ def score_to_grade(score):
 # =====================================================
 class Student:
     def __init__(self, student_id, name, scores):
-        self.student_id = student_id   # text, e.g. "001"
+        self.student_id = student_id   # text, e.g. "6907012660059"
         self.name = name               # text, e.g. "RICO"
         self.scores = scores           # list of 5 numbers
 
@@ -79,8 +79,8 @@ class Student:
         print(border)
         print("|" + "REPORT CARD".center(30) + "|")
         print(divider)
-        print("| Full Name : " + self.name.ljust(22) + "|")
-        print("| Student ID   : " + self.student_id.ljust(22) + "|")
+        print("| Name : " + self.name.ljust(22) + "|")
+        print("| ID   : " + self.student_id.ljust(22) + "|")
         print(divider)
         for i in range(len(SUBJECTS)):
             text = f" {SUBJECTS[i]:<12}{self.scores[i]:>5}{score_to_grade(self.scores[i]):>8}"
@@ -188,7 +188,7 @@ def add_student(students):
             print("This ID already exists.")
             continue
 
-        name = input("Student name: ").strip().upper().replace(",", " ")
+        name = input("Student Name: ").strip().upper().replace(",", " ")
         if name == "":
             print("Name cannot be empty.")
             continue
